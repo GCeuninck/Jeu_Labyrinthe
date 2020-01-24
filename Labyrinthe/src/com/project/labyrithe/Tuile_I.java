@@ -32,5 +32,9 @@ public class Tuile_I extends Tuile{
                 break;
         }
     }
+    
+    public void Action(Jeu jeu){
+    
+    }
 
 }

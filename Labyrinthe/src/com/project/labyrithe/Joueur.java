@@ -35,6 +35,7 @@ public class Joueur {
     	AStar as = new AStar(plateau_jeu, this.x_coord, this.y_coord);
     	
     	List<Noeud> chemin = as.findPathTo(x, y);
+   
     	if (chemin != null) {
     		this.x_coord = x;
     		this.y_coord = y;
@@ -73,12 +74,14 @@ public class Joueur {
     	return res;
     }
 
-    /*
-    void actionCheck(Plateau plateau_jeu){
-        this.position.actionTuile(plateau_jeu, this);
+    
+    void actionCheck(Jeu jeu){
+    	
+        if(this.position.isSpecial()) {
+        	this.position.Action(jeu);
+        }
     }
-    */
-
+    
 
     public void updateJoueur() {
     	

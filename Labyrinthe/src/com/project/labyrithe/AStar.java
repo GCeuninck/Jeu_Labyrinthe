@@ -69,6 +69,7 @@ public class AStar {
             this.courant = this.courant.parent;
             this.chemin.add(0, this.courant);
         }
+        
         return this.chemin;
     }
     /*

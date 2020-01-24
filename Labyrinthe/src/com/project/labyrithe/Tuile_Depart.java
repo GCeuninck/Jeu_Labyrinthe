@@ -1,7 +1,7 @@
 package com.project.labyrithe;
 
 //NB: 4
-public class Tuile_Depart extends Tuile{
+public class Tuile_Depart extends Tuile {
 
     Tuile_Depart(int id, int rotation, String tresor, Integer x_coord, Integer y_coord){
         Rotation(rotation);
@@ -46,10 +46,19 @@ public class Tuile_Depart extends Tuile{
         }
     }
     
-    public void actionDepart(Joueur J){
+    public void Action(Jeu jeu){
     	
-    	if(J.id_depart == this.getId() && J.objectifCompleted()){
-    		J.victoire = true;
+    	if(jeu.J1.id_depart == this.getId() && jeu.J1.objectifCompleted()){
+    		jeu.J1.victoire = true;
+    	}
+    	else if(jeu.J2.id_depart == this.getId() && jeu.J2.objectifCompleted()){
+    		jeu.J2.victoire = true;
+    	}
+    	else if(jeu.J3.id_depart == this.getId() && jeu.J3.objectifCompleted()){
+    		jeu.J3.victoire = true;
+    	}
+    	if(jeu.J4.id_depart == this.getId() && jeu.J4.objectifCompleted()){
+    		jeu.J4.victoire = true;
     	}
     }
 }

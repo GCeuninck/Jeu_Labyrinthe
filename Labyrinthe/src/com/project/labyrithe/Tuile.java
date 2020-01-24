@@ -62,21 +62,12 @@ public abstract class Tuile implements Int_Tuile{
     	return res;
     }
     
-    public boolean[] getJoueur(Joueur J1, Joueur J2, Joueur J3, Joueur J4) {
+    public boolean getJoueur(Joueur J) {
     	
-    	boolean res[] = {false, false, false, false};
+    	boolean res = false;
     	
-    	if(J1.position == this) {
-    		res[0] = true;
-    	}
-    	if(J2.position == this) {
-    		res[1] = true;
-    	}
-    	if(J3.position == this) {
-    		res[2] = true;
-    	}
-    	if(J4.position == this) {
-    		res[3] = true;
+    	if(J.position.getId() == this.getId()) {
+    		res = true;
     	}
     	
     	return res;
@@ -115,6 +106,17 @@ public abstract class Tuile implements Int_Tuile{
 
 	public int getId(){
     	return this.id;
+	}
+	
+	public boolean isSpecial() {
+		
+		boolean res = false;
+		
+		if(this.tuile_depart || this.tuile_echange || this.tuile_rotation) {
+			res = true;
+		}
+		
+		return res;
 	}
 
 	@Override

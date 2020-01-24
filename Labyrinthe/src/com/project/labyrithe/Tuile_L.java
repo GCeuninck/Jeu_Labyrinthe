@@ -44,5 +44,9 @@ public class Tuile_L extends Tuile{
                 break;
         }
     }
+    
+    public void Action(Jeu jeu){
+    	
+    }
 
 }

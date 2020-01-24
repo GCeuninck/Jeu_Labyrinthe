@@ -1,5 +1,7 @@
 package com.project.labyrithe;
 
+import java.util.Scanner;
+
 //NB: 1
 public class Tuile_Rotation extends Tuile{
 
@@ -46,8 +48,29 @@ public class Tuile_Rotation extends Tuile{
         }
     }
 
-    public void actionRotation(Int_Tuile tuile, int rotation){
+    public void Action(Jeu jeu){
+    	
+    	Scanner scanner = new Scanner(System.in);
 
-    	tuile.Rotation(rotation);
+    	int input_ligne = -1;
+        int input_colonne = -1;
+        int rotation = -1;
+
+        while(input_ligne % 2 == 0 && input_colonne%2 == 0) {
+        	System.out.println("Selectionnez une coordonnee ligne mobile (2, 4 ou 6");
+            input_ligne = scanner.nextInt();
+            
+            System.out.println("Selectionnez une coordonnee colonne mobile (2, 4 ou 6");
+            input_colonne = scanner.nextInt();
+        }
+        
+        while(rotation < 0 && rotation > 3) {
+        	System.out.println("Selectionnez une rotation valide (0 a 3");
+            rotation = scanner.nextInt();
+        }
+    	
+    	jeu.plateau_jeu.plateau[input_ligne-1][input_colonne-1].Rotation(rotation);
+    	
+    	//scanner.close();
     }
 }

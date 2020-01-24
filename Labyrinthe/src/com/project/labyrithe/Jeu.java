@@ -60,6 +60,8 @@ public class Jeu {
     }
 
     void tourJoueur(Joueur joueur){
+    	
+    	joueur.afficherJoueur();
         Scanner scanner = new Scanner(System.in);
 
         boolean inputLine;
@@ -119,11 +121,11 @@ public class Jeu {
             inputY = scanner.nextInt();
         }
 
-        //joueur.actionCheck(this.plateau_jeu);
+        joueur.actionCheck(this);
 
         joueur.updateJoueur();
         joueur.afficherJoueur();
-        scanner.close();
+        //scanner.close();
     }
 
     void testDeplacement(Joueur J1, Joueur J2, Joueur J3, Joueur J4){
@@ -143,7 +145,7 @@ public class Jeu {
         this.plateau_jeu.afficherPlateau();
         System.out.println("Tuile restante: " + this.tuile_mobile);
 
-        if(this.tuile_mobile.getJoueur(J1,J2,J3,J4)[3]) {
+        if(this.tuile_mobile.getJoueur(J4)) {
         	J4.replaceJoueur(this.plateau_jeu, false, true, 2);
         }
 

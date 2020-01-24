@@ -123,13 +123,13 @@ public class Plateau {
             case "Tuile_Rotation":
                 tuile = new Tuile_Rotation(id_tuile, rotation, tresor, i, j);
                 break;
-            case "Type_L":
+            case "Tuile_L":
                 tuile = new Tuile_L(id_tuile, rotation, tresor, i, j);
                 break;
-            case "Type_T":
+            case "Tuile_T":
                 tuile = new Tuile_T(id_tuile, rotation, tresor, i, j);
                 break;
-            case "Type_I":
+            case "Tuile_I":
                 tuile = new Tuile_I(id_tuile, rotation, tresor, i, j);
                 break;
             default:
