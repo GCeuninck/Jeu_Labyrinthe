@@ -56,11 +56,11 @@ public class Tuile_Rotation extends Tuile{
         int input_colonne = -1;
         int rotation = -1;
 
-        while(input_ligne % 2 == 0 && input_colonne%2 == 0) {
-        	System.out.println("Selectionnez une coordonnee ligne mobile (2, 4 ou 6");
+        while(input_ligne % 2 == 1 && input_colonne%2 == 1) {
+        	System.out.println("Selectionnez une coordonnee ligne mobile");
             input_ligne = scanner.nextInt();
             
-            System.out.println("Selectionnez une coordonnee colonne mobile (2, 4 ou 6");
+            System.out.println("Selectionnez une coordonnee colonne mobile");
             input_colonne = scanner.nextInt();
         }
         

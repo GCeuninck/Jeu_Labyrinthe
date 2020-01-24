@@ -83,14 +83,14 @@ public class Jeu {
         if(inputL == 1) {inputLine = true;}
         else {inputLine = false;}
 
-        System.out.println("Selection - Croissant : 1 | Décroissant : 2");
+        System.out.println("Selection - Croissant : 1 | Decroissant : 2");
         while(inputS != 1 && inputS != 2){
             inputS = scanner.nextInt();
         }
         if(inputS == 1) {inputSelect = true;}
         else {inputSelect = false;}
 
-        System.out.println("Selection - Numéro de ligne/colonne a bouger: ");
+        System.out.println("Selection - Numero de ligne/colonne a bouger: ");
         while(inputN != 2 && inputN != 4 && inputN != 6){
             inputN = scanner.nextInt();
         }
