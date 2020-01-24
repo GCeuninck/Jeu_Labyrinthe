@@ -47,11 +47,19 @@ public class Tuile_Echange extends Tuile{
                 break;
         }
     }
+    
+    public void Echange(Joueur J1, Joueur J2) {
+    	Int_Tuile pos_temp = J1.position;
+    	
+    	if(J2.special_echange) {
+	    	J1.position = J2.position;
+			J2.position = pos_temp;
+			J2.special_echange = false;
+    	}
+    }
 
     //Echange la place d'un joueur avec un autre
     public void Action(Jeu jeu){
-    	
-    	Int_Tuile pos_temp = null;
     	
     	Scanner scanner = new Scanner(System.in);
 
@@ -68,77 +76,66 @@ public class Tuile_Echange extends Tuile{
             inputJ2 = scanner.nextInt();
         }
 
-        if(inputJ1 == 1) {
+        if(inputJ1 == 1 && jeu.J1.special_echange) {
         	
-        	pos_temp = jeu.J1.position;
+        	jeu.J1.special_echange = false;        	
         	switch(inputJ2) {
         		case 2: 
-        			jeu.J1.position = jeu.J2.position;
-        			jeu.J2.position = pos_temp;
+        			Echange(jeu.J1, jeu.J2);
         			break;
         		case 3: 
-        			jeu.J1.position = jeu.J3.position;
-        			jeu.J3.position = pos_temp;
+        			Echange(jeu.J1, jeu.J3);
         			break;
         		case 4: 
-        			jeu.J1.position = jeu.J4.position;
-        			jeu.J4.position = pos_temp;
+        			Echange(jeu.J1, jeu.J4);
         			break;
         		default: break;
         	}
         }
-        else if(inputJ1 == 2) {
+        else if(inputJ1 == 2 && jeu.J2.special_echange) {
 
-        	pos_temp = jeu.J2.position;
+        	jeu.J2.special_echange = false;
         	switch(inputJ2) {
         		case 1: 
-        			jeu.J2.position = jeu.J1.position;
-        			jeu.J1.position = pos_temp;
+        			Echange(jeu.J2, jeu.J1);
         			break;
         		case 3: 
-        			jeu.J2.position = jeu.J3.position;
-        			jeu.J3.position = pos_temp;
+        			Echange(jeu.J2, jeu.J3);
         			break;
         		case 4: 
-        			jeu.J2.position = jeu.J4.position;
-        			jeu.J4.position = pos_temp;
+        			Echange(jeu.J2, jeu.J4);
         			break;
         		default: break;
         	}
         }
-        else if(inputJ1 == 3) {
+        else if(inputJ1 == 3 && jeu.J3.special_echange) {
         	
-        	pos_temp = jeu.J3.position;
+        	jeu.J3.special_echange = false;
         	switch(inputJ2) {
         		case 1: 
-        			jeu.J3.position = jeu.J1.position;
-        			jeu.J1.position = pos_temp;
+        			Echange(jeu.J3, jeu.J1);
         			break;
         		case 2: 
-        			jeu.J3.position = jeu.J2.position;
-        			jeu.J2.position = pos_temp;
+        			Echange(jeu.J3, jeu.J2);
         			break;
         		case 4: 
-        			jeu.J3.position = jeu.J4.position;
-        			jeu.J4.position = pos_temp;
+        			Echange(jeu.J3, jeu.J4);
         			break;
         		default: break;
         	}
         }
-        else if(inputJ1 == 4) {
-        	pos_temp = jeu.J4.position;
+        else if(inputJ1 == 4 && jeu.J4.special_echange) {
+        	
+        	jeu.J4.special_echange = false;
         	switch(inputJ2) {
         		case 1: 
-        			jeu.J4.position = jeu.J1.position;
-        			jeu.J1.position = pos_temp;
+        			Echange(jeu.J4, jeu.J1);
         			break;
         		case 2: 
-        			jeu.J4.position = jeu.J2.position;
-        			jeu.J2.position = pos_temp;
+        			Echange(jeu.J4, jeu.J2);
         			break;
         		case 3: 
-        			jeu.J4.position = jeu.J3.position;
-        			jeu.J3.position = pos_temp;
+        			Echange(jeu.J4, jeu.J3);
         			break;
         		default: break;
         	}
