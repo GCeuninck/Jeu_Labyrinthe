@@ -8,6 +8,7 @@ public class Joueur {
     String couleur;
     Int_Tuile position;
     Integer x_coord, y_coord;
+    Integer id_depart;
     LinkedList<String> cartes;
     LinkedList<Boolean> objectifs;
 
@@ -15,6 +16,7 @@ public class Joueur {
     Joueur(Plateau plateau_jeu, String couleur, Integer x_coord, Integer y_coord){
         this.victoire = false;
         this.couleur = couleur;
+        this.id_depart = plateau_jeu.plateau[x_coord][y_coord].getId();
         this.position = plateau_jeu.plateau[x_coord][y_coord];
         this.x_coord = x_coord;
         this.y_coord = y_coord;
@@ -59,6 +61,17 @@ public class Joueur {
             this.cartes.remove(tresor_case);
         }
     }
+    
+    public boolean objectifCompleted() {
+    	
+    	boolean res = false;
+    	
+    	if(this.cartes.isEmpty()) {
+    		res = true;
+    	}
+    	
+    	return res;
+    }
 
     /*
     void actionCheck(Plateau plateau_jeu){
@@ -67,7 +80,7 @@ public class Joueur {
     */
 
 
-    void updateJoueur() {
+    public void updateJoueur() {
     	
     	this.x_coord = this.position.getCoord()[0];
     	this.y_coord = this.position.getCoord()[1];

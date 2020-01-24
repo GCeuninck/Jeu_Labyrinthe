@@ -2,13 +2,17 @@ package com.project.labyrithe;
 
 public abstract class Tuile implements Int_Tuile{
     String tresor = null;
-    boolean haut;       //Autorise déplacement du joueur
+    boolean haut;       //Autorise deplacement du joueur
     boolean bas;
     boolean gauche;
     boolean droit;
     int rotation = 0;   //Permet de connaitre le sens dans lequel on place la tuile dans le labyrinthe
     int id;
     Integer x_coord, y_coord;
+    
+    boolean tuile_depart = false;
+	boolean tuile_echange = false;
+	boolean tuile_rotation = false;
     
     public boolean[] getAccess() {
     	

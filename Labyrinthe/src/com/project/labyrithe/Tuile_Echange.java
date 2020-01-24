@@ -9,6 +9,7 @@ public class Tuile_Echange extends Tuile{
         super.tresor = tresor;
         super.x_coord = x_coord;
         super.y_coord = y_coord;
+        super.tuile_echange = true;
     }
 
     public void Rotation(int rotation){
@@ -46,8 +47,19 @@ public class Tuile_Echange extends Tuile{
     }
 
     //Echange la place avec un autre joueur
-    public void Action(){
-
+    public void actionEchange(Joueur J1, Joueur J2){
+    	
+    	Integer x_coord_temp = J1.x_coord;
+    	Integer y_coord_temp = J1.y_coord;
+    	Int_Tuile position_temp = J1.position;
+    	
+    	J1.x_coord = J2.x_coord;
+    	J1.y_coord = J2.y_coord;
+    	J1.position = J2.position;
+    	
+    	J2.x_coord = x_coord_temp;
+    	J2.y_coord = y_coord_temp;
+    	J2.position = position_temp;
     }
 
 }

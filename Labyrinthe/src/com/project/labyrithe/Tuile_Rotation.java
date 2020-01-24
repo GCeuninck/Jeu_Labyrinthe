@@ -9,6 +9,7 @@ public class Tuile_Rotation extends Tuile{
         super.tresor = tresor;
         super.x_coord = x_coord;
         super.y_coord = y_coord;
+        super.tuile_rotation = true;
     }
 
     public void Rotation(int rotation){
@@ -45,4 +46,8 @@ public class Tuile_Rotation extends Tuile{
         }
     }
 
+    public void actionRotation(Int_Tuile tuile, int rotation){
+
+    	tuile.Rotation(rotation);
+    }
 }

@@ -2,7 +2,7 @@ package com.project.labyrithe;
 
 import java.util.*;
 
-class AStar {
+public class AStar {
     private final List<Noeud> open;
     private final List<Noeud> closed;
     private final List<Noeud> chemin;

@@ -9,6 +9,7 @@ public class Tuile_Depart extends Tuile{
         super.tresor = tresor;
         super.x_coord = x_coord;
         super.y_coord = y_coord;
+        super.tuile_depart = true;
     }
 
     public void Rotation(int rotation){
@@ -44,5 +45,11 @@ public class Tuile_Depart extends Tuile{
                 break;
         }
     }
-
+    
+    public void actionDepart(Joueur J){
+    	
+    	if(J.id_depart == this.getId() && J.objectifCompleted()){
+    		J.victoire = true;
+    	}
+    }
 }

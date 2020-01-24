@@ -12,5 +12,4 @@ public interface Int_Tuile {
     void copieCoord(Int_Tuile tuile);
     public void setCoord(Integer x_coord, Integer y_coord);
     public int getId();
-    //public void actionTuile(Plateau plateau_jeu, Joueur joueur);
 }
