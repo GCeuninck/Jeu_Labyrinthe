@@ -69,8 +69,6 @@ public class Tuile_Rotation extends Tuile{
             rotation = scanner.nextInt();
         }
     	
-    	jeu.plateau_jeu.plateau[input_ligne-1][input_colonne-1].Rotation(rotation);
-    	
-    	//scanner.close();
+    	jeu.plateau_jeu.plateau[input_ligne-1][input_colonne-1].Rotation(rotation);    	
     }
 }

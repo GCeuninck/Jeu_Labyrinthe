@@ -140,8 +140,6 @@ public class Tuile_Echange extends Tuile{
         		default: break;
         	}
         }
-      
-        //scanner.close();
     }
 
 }
