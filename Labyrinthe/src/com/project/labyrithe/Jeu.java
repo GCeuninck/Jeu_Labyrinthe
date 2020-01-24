@@ -123,6 +123,7 @@ public class Jeu {
 
         joueur.updateJoueur();
         joueur.afficherJoueur();
+        scanner.close();
     }
 
     void testDeplacement(Joueur J1, Joueur J2, Joueur J3, Joueur J4){
