@@ -51,9 +51,6 @@ public class Tuile_Echange extends Tuile{
     //Echange la place d'un joueur avec un autre
     public void Action(Jeu jeu){
     	
-    	Integer J_temp_x = null;
-    	Integer J_temp_y = null;
-    	
     	Int_Tuile pos_temp = null;
     	
     	Scanner scanner = new Scanner(System.in);
@@ -73,71 +70,37 @@ public class Tuile_Echange extends Tuile{
 
         if(inputJ1 == 1) {
         	
-        	J_temp_x = jeu.J1.x_coord;
-        	J_temp_y = jeu.J1.y_coord;
         	pos_temp = jeu.J1.position;
         	switch(inputJ2) {
         		case 2: 
-        			jeu.J1.x_coord = jeu.J2.x_coord;
-        			jeu.J1.y_coord = jeu.J2.y_coord;
         			jeu.J1.position = jeu.J2.position;
-        			
-        			jeu.J2.x_coord = J_temp_x;
-        			jeu.J2.y_coord = J_temp_y;
         			jeu.J2.position = pos_temp;
         			break;
         		case 3: 
-        			jeu.J1.x_coord = jeu.J3.x_coord;
-        			jeu.J1.y_coord = jeu.J3.y_coord;
         			jeu.J1.position = jeu.J3.position;
-        			
-        			jeu.J3.x_coord = J_temp_x;
-        			jeu.J3.y_coord = J_temp_y;
         			jeu.J3.position = pos_temp;
         			break;
         		case 4: 
-        			jeu.J1.x_coord = jeu.J4.x_coord;
-        			jeu.J1.y_coord = jeu.J4.y_coord;
         			jeu.J1.position = jeu.J4.position;
-        			
-        			jeu.J4.x_coord = J_temp_x;
-        			jeu.J4.y_coord = J_temp_y;
         			jeu.J4.position = pos_temp;
         			break;
         		default: break;
         	}
         }
         else if(inputJ1 == 2) {
-        	
-        	J_temp_x = jeu.J2.x_coord;
-        	J_temp_y = jeu.J2.y_coord;
+
         	pos_temp = jeu.J2.position;
         	switch(inputJ2) {
         		case 1: 
-        			jeu.J2.x_coord = jeu.J1.x_coord;
-        			jeu.J2.y_coord = jeu.J1.y_coord;
         			jeu.J2.position = jeu.J1.position;
-        			
-        			jeu.J1.x_coord = J_temp_x;
-        			jeu.J1.y_coord = J_temp_y;
         			jeu.J1.position = pos_temp;
         			break;
         		case 3: 
-        			jeu.J2.x_coord = jeu.J3.x_coord;
-        			jeu.J2.y_coord = jeu.J3.y_coord;
         			jeu.J2.position = jeu.J3.position;
-        			
-        			jeu.J3.x_coord = J_temp_x;
-        			jeu.J3.y_coord = J_temp_y;
         			jeu.J3.position = pos_temp;
         			break;
         		case 4: 
-        			jeu.J2.x_coord = jeu.J4.x_coord;
-        			jeu.J2.y_coord = jeu.J4.y_coord;
         			jeu.J2.position = jeu.J4.position;
-        			
-        			jeu.J4.x_coord = J_temp_x;
-        			jeu.J4.y_coord = J_temp_y;
         			jeu.J4.position = pos_temp;
         			break;
         		default: break;
@@ -145,71 +108,36 @@ public class Tuile_Echange extends Tuile{
         }
         else if(inputJ1 == 3) {
         	
-        	J_temp_x = jeu.J3.x_coord;
-        	J_temp_y = jeu.J3.y_coord;
         	pos_temp = jeu.J3.position;
         	switch(inputJ2) {
         		case 1: 
-        			jeu.J3.x_coord = jeu.J1.x_coord;
-        			jeu.J3.y_coord = jeu.J1.y_coord;
         			jeu.J3.position = jeu.J1.position;
-        			
-        			jeu.J1.x_coord = J_temp_x;
-        			jeu.J1.y_coord = J_temp_y;
         			jeu.J1.position = pos_temp;
         			break;
         		case 2: 
-        			jeu.J3.x_coord = jeu.J2.x_coord;
-        			jeu.J3.y_coord = jeu.J2.y_coord;
         			jeu.J3.position = jeu.J2.position;
-        			
-        			jeu.J2.x_coord = J_temp_x;
-        			jeu.J2.y_coord = J_temp_y;
         			jeu.J2.position = pos_temp;
         			break;
         		case 4: 
-        			jeu.J3.x_coord = jeu.J4.x_coord;
-        			jeu.J3.y_coord = jeu.J4.y_coord;
         			jeu.J3.position = jeu.J4.position;
-        			
-        			jeu.J4.x_coord = J_temp_x;
-        			jeu.J4.y_coord = J_temp_y;
         			jeu.J4.position = pos_temp;
         			break;
         		default: break;
         	}
         }
         else if(inputJ1 == 4) {
-        	
-        	J_temp_x = jeu.J4.x_coord;
-        	J_temp_y = jeu.J4.y_coord;
         	pos_temp = jeu.J4.position;
         	switch(inputJ2) {
         		case 1: 
-        			jeu.J4.x_coord = jeu.J1.x_coord;
-        			jeu.J4.y_coord = jeu.J1.y_coord;
         			jeu.J4.position = jeu.J1.position;
-        			
-        			jeu.J1.x_coord = J_temp_x;
-        			jeu.J1.y_coord = J_temp_y;
         			jeu.J1.position = pos_temp;
         			break;
         		case 2: 
-        			jeu.J4.x_coord = jeu.J2.x_coord;
-        			jeu.J4.y_coord = jeu.J2.y_coord;
         			jeu.J4.position = jeu.J2.position;
-        			
-        			jeu.J2.x_coord = J_temp_x;
-        			jeu.J2.y_coord = J_temp_y;
         			jeu.J2.position = pos_temp;
         			break;
         		case 3: 
-        			jeu.J4.x_coord = jeu.J3.x_coord;
-        			jeu.J4.y_coord = jeu.J3.y_coord;
         			jeu.J4.position = jeu.J3.position;
-        			
-        			jeu.J3.x_coord = J_temp_x;
-        			jeu.J3.y_coord = J_temp_y;
         			jeu.J3.position = pos_temp;
         			break;
         		default: break;
