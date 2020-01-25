@@ -56,7 +56,7 @@ public class Tuile_Rotation extends Tuile{
         int input_colonne = -1;
         int rotation = -1;
 
-        while(input_ligne % 2 == 1 && input_colonne%2 == 1) {
+        while(input_ligne % 2 != 0 || input_colonne%2 != 0) {
         	System.out.println("Selectionnez une coordonnee ligne mobile");
             input_ligne = scanner.nextInt();
             
@@ -64,8 +64,8 @@ public class Tuile_Rotation extends Tuile{
             input_colonne = scanner.nextInt();
         }
         
-        while(rotation < 0 && rotation > 3) {
-        	System.out.println("Selectionnez une rotation valide (0 a 3");
+        while(rotation < 0 || rotation > 3) {
+        	System.out.println("Selectionnez une rotation valide (0 a 3)");
             rotation = scanner.nextInt();
         }
     	
