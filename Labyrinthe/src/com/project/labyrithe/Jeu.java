@@ -23,7 +23,6 @@ public class Jeu {
         Joueur J3 = new Joueur(plateau, "Jaune", 6, 6);
         Joueur J4 = new Joueur(plateau, "Rouge", 6, 0);
         Cartes cartes = new Cartes();
-
         Jeu jeu = new Jeu(plateau, J1, J2, J3, J4, cartes);
 
         //Tirer les cartes pour les joueurs
@@ -77,8 +76,19 @@ public class Jeu {
     	
     	joueur.afficherJoueur();
     	joueur.afficherCartes();
+
+        this.tourDeplacementPlateau();
+        this.tourDeplacementJoueur(joueur);
+
+        joueur.actionCheck(this);
+        joueur.objectifCheck();
+        joueur.updateJoueur();
+        joueur.afficherJoueur();
+    }
+    
+    private void tourDeplacementPlateau() {
     	
-        Scanner scanner = new Scanner(System.in);
+    	Scanner scanner = new Scanner(System.in);
 
         boolean inputLine;
         boolean inputSelect;
@@ -87,9 +97,7 @@ public class Jeu {
         int inputS = -1;
         int inputN = -1;
         int inputR = -1;
-        int inputX = -1;
-        int inputY = -1;
-
+        
         System.out.println("Selection - Ligne : 1 | Colonne : 2");
         while(inputL != 1 && inputL != 2) {
             inputL = scanner.nextInt();
@@ -117,7 +125,16 @@ public class Jeu {
         this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this , inputLine, inputSelect, inputN, this.tuile_mobile, inputR);
         this.plateau_jeu.afficherPlateau();
         System.out.println("Tuile restante: " + this.tuile_mobile);
-
+        
+    }
+    
+    private void tourDeplacementJoueur(Joueur J) {
+    	
+    	Scanner scanner = new Scanner(System.in);
+    	
+    	int inputX = -1;
+        int inputY = -1;
+        
         System.out.println("Entrer la case de destination (ligne ; colonne): ");
 
         System.out.println("Entrer Ligne (1 a 7) : ");
@@ -125,7 +142,7 @@ public class Jeu {
         System.out.println("Entrer Colonne (1 a 7) : ");
         inputY = scanner.nextInt();
 
-        while (!joueur.deplacementJoueur(this.plateau_jeu, inputX - 1, inputY - 1)){
+        while (!J.deplacementJoueur(this.plateau_jeu, inputX - 1, inputY - 1)){
             System.out.println("DEPLACEMENT IMPOSSIBLE");
 
             System.out.println("Entrer Ligne (1 a 7) : ");
@@ -134,12 +151,8 @@ public class Jeu {
             System.out.println("Entrer Colonne (1 a 7) : ");
             inputY = scanner.nextInt();
         }
-
-        joueur.actionCheck(this);
-        joueur.objectifCheck();
-        joueur.updateJoueur();
-        joueur.afficherJoueur();
     }
+    
 
     void testDeplacement(Joueur J1, Joueur J2, Joueur J3, Joueur J4){
         this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this, true, true, 2, this.tuile_mobile, 0);         //Deplace 2e ligne vers droite

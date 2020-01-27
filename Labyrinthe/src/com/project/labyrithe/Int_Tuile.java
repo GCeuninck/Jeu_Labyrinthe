@@ -2,7 +2,6 @@ package com.project.labyrithe;
 
 public interface Int_Tuile {
 	
-	
     public void Rotation(int rotation);
     public boolean estAccessible(Plateau plateau_jeu, Integer x, Integer y);
     public boolean[] getAccess();

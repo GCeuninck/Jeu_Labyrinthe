@@ -7,14 +7,15 @@ import java.util.LinkedList;
 import java.util.Random;
 
 public class Cartes {
-    LinkedList<String[]> liste_cartes;
+    
+	LinkedList<String[]> liste_cartes;
 
     Cartes(){
         initialiserCartes();
     }
 
     void initialiserCartes(){
-        //Récupération des informations des cartes dans une liste
+        //Recuperation des informations des cartes dans une liste
         File file = new File("Cartes.csv");
         String ligne;
         liste_cartes = new LinkedList<String[]>();
