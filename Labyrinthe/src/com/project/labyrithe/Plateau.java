@@ -143,7 +143,7 @@ public class Plateau {
     //Ligne = true : mouvement sur ligne ; Ligne = false : mouvement sur colonne
     //Sens = true : petit vers grand ; Sens = false : grand vers petit
     //Num : indice de la ligne à déplacer;
-    Int_Tuile deplacementPlateau(boolean ligne, boolean sens, int num, Int_Tuile tuile_ajout, int rotation){
+    Int_Tuile deplacementPlateau(Jeu jeu, boolean ligne, boolean sens, int num, Int_Tuile tuile_ajout, int rotation){
         tuile_ajout.Rotation(rotation);
         Int_Tuile tuile_mobile = null;
         int i;
@@ -213,8 +213,28 @@ public class Plateau {
         }
         
         tuile_mobile.copieCoord(null);
-
+        checkJoueurPostDeplacement(jeu, ligne, sens, num, tuile_mobile);
+        
         return tuile_mobile;
+    }
+    
+    public void checkJoueurPostDeplacement(Jeu jeu, boolean ligne, boolean sens, int num, Int_Tuile tuile_mobile) {
+    	
+    	if(tuile_mobile.getJoueur(jeu.J1)) {
+        	jeu.J1.replaceJoueur(jeu.plateau_jeu, ligne, sens, num);
+        }
+    	
+    	if(tuile_mobile.getJoueur(jeu.J2)) {
+        	jeu.J2.replaceJoueur(jeu.plateau_jeu, ligne, sens, num);
+        }
+    	
+    	if(tuile_mobile.getJoueur(jeu.J3)) {
+        	jeu.J3.replaceJoueur(jeu.plateau_jeu, ligne, sens, num);
+        }
+    	
+    	if(tuile_mobile.getJoueur(jeu.J4)) {
+        	jeu.J4.replaceJoueur(jeu.plateau_jeu, ligne, sens, num);
+        }
     }
 
 }

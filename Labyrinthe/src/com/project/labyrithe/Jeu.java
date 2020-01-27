@@ -110,7 +110,7 @@ public class Jeu {
             inputR = scanner.nextInt();
         }
 
-        this.tuile_mobile = this.plateau_jeu.deplacementPlateau(inputLine, inputSelect, inputN, this.tuile_mobile, inputR);
+        this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this , inputLine, inputSelect, inputN, this.tuile_mobile, inputR);
         this.plateau_jeu.afficherPlateau();
         System.out.println("Tuile restante: " + this.tuile_mobile);
 
@@ -138,29 +138,25 @@ public class Jeu {
     }
 
     void testDeplacement(Joueur J1, Joueur J2, Joueur J3, Joueur J4){
-        this.tuile_mobile = this.plateau_jeu.deplacementPlateau(true, true, 2, this.tuile_mobile, 0);         //Deplace 2e ligne vers droite
+        this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this, true, true, 2, this.tuile_mobile, 0);         //Deplace 2e ligne vers droite
         this.plateau_jeu.afficherPlateau();
         System.out.println("Tuile restante: " + this.tuile_mobile);
 
         System.out.println();
 
-        this.tuile_mobile = this.plateau_jeu.deplacementPlateau(true, false, 2, this.tuile_mobile, 3);        //Deplace 2e ligne vers gauche
+        this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this, true, false, 2, this.tuile_mobile, 3);        //Deplace 2e ligne vers gauche
         this.plateau_jeu.afficherPlateau();
         System.out.println("Tuile restante: " + this.tuile_mobile);
 
         System.out.println();
 
-        this.tuile_mobile = this.plateau_jeu.deplacementPlateau(false, true, 2, this.tuile_mobile, 2);        //Deplace 2e colonne vers bas
+        this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this, false, true, 2, this.tuile_mobile, 2);        //Deplace 2e colonne vers bas
         this.plateau_jeu.afficherPlateau();
         System.out.println("Tuile restante: " + this.tuile_mobile);
 
-        if(this.tuile_mobile.getJoueur(J4)) {
-        	J4.replaceJoueur(this.plateau_jeu, false, true, 2);
-        }
-
         System.out.println();
 
-        this.tuile_mobile = this.plateau_jeu.deplacementPlateau(false, false, 2, this.tuile_mobile, 0);        //Deplace 2e colonne vers haut
+        this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this, false, false, 2, this.tuile_mobile, 0);        //Deplace 2e colonne vers haut
         this.plateau_jeu.afficherPlateau();
         System.out.println("Tuile restante: " + this.tuile_mobile);
     }
