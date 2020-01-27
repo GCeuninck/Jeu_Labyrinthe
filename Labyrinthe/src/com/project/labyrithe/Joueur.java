@@ -12,7 +12,6 @@ public class Joueur {
     Integer x_coord, y_coord;
     Integer id_depart;
     LinkedList<String> cartes;
-    LinkedList<Boolean> objectifs;
 
 
     Joueur(Plateau plateau_jeu, String couleur, Integer x_coord, Integer y_coord){
@@ -25,7 +24,6 @@ public class Joueur {
         this.x_coord = x_coord;
         this.y_coord = y_coord;
         this.cartes = new LinkedList<String>();
-        this.objectifs = new LinkedList<Boolean>();
     }
     
     public void afficherJoueur(){
@@ -62,7 +60,6 @@ public class Joueur {
         String tresor_case = this.position.getTresor();
 
         if(this.cartes.contains(tresor_case)){
-            this.objectifs.add(true);
             this.cartes.remove(tresor_case);
         }
     }
@@ -79,14 +76,12 @@ public class Joueur {
     	return res;
     }
 
-    
     void actionCheck(Jeu jeu){
     	
         if(this.position.isSpecial()) {
         	this.position.Action(jeu);
         }
     }
-    
 
     public void updateJoueur() {
     	

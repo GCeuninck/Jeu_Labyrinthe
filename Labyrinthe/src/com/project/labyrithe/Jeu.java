@@ -27,8 +27,7 @@ public class Jeu {
         Jeu jeu = new Jeu(plateau, J1, J2, J3, J4, cartes);
 
         //Tirer les cartes pour les joueurs
-        //jeu.J1.tirerCartes(jeu.cartes);
-        jeu.J1.cartes.add("Epee");
+        jeu.J1.tirerCartes(jeu.cartes);
         jeu.J2.tirerCartes(jeu.cartes);
         jeu.J3.tirerCartes(jeu.cartes);
         jeu.J4.tirerCartes(jeu.cartes);
@@ -135,7 +134,6 @@ public class Jeu {
 
         joueur.actionCheck(this);
         joueur.objectifCheck();
-
         joueur.updateJoueur();
         joueur.afficherJoueur();
     }
