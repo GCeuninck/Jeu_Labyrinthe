@@ -4,13 +4,12 @@ import java.util.*;
 import com.project.labyrithe.AStar.Noeud;
 
 public class Joueur {
-    boolean victoire;
-    String couleur;
-    Int_Tuile position;
-    Integer x_coord, y_coord;
-    Integer id_depart;
-    LinkedList<String> cartes;
-
+    protected boolean victoire;
+    protected String couleur;
+    protected Int_Tuile position;
+    protected Integer x_coord, y_coord;
+    protected Integer id_depart;
+    protected LinkedList<String> cartes;
 
     Joueur(Plateau plateau_jeu, String couleur, Integer x_coord, Integer y_coord){
         this.victoire = false;
@@ -71,7 +70,7 @@ public class Joueur {
     	
     	if(this.cartes.isEmpty()) {
     		res = true;
-    		System.out.println("Voictoire " + this.couleur + "!");
+    		System.out.println("Victoire " + this.couleur + "!");
     	}
     	
     	return res;
@@ -96,22 +95,18 @@ public class Joueur {
             
             this.x_coord = num-1;
             this.y_coord = 0;
-            System.out.println("G-->D");
         } else if (ligne && !sens) {
         	
-        	this.x_coord = 6;
+        	this.x_coord = plateau_jeu.plateau.length - 1;
             this.y_coord = num-1;
-            System.out.println("D-->G");
         } else if (!ligne && sens){
          
         	this.x_coord = 0;
             this.y_coord = num-1;
-            System.out.println("H-->B");
         } else if (!ligne && !sens){
        
-        	this.x_coord = 6;
+        	this.x_coord = plateau_jeu.plateau.length - 1;
             this.y_coord = num-1;
-            System.out.println("B-->H");
         }
     	
     	this.position = plateau_jeu.plateau[this.x_coord][this.y_coord];

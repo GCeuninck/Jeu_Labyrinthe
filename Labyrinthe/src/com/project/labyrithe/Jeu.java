@@ -24,6 +24,7 @@ public class Jeu {
         Joueur J4 = new Joueur(plateau, "Rouge", 6, 0);
         Cartes cartes = new Cartes();
         Jeu jeu = new Jeu(plateau, J1, J2, J3, J4, cartes);
+   
 
         //Tirer les cartes pour les joueurs
         jeu.J1.tirerCartes(jeu.cartes);
@@ -46,7 +47,7 @@ public class Jeu {
         jeu.tuile_mobile = jeu.plateau_jeu.creerTuile(Integer.parseInt(jeu.plateau_jeu.liste_tuiles.getFirst()[0]), jeu.plateau_jeu.liste_tuiles.getFirst()[2], 0, jeu.plateau_jeu.liste_tuiles.getFirst()[1], null, null);
 
         plateau.afficherPlateau();
-        System.out.println("Tuile restante : " + jeu.tuile_mobile);       
+        System.out.println("Tuile restante : " + jeu.tuile_mobile);  
 
         //jeu.testDeplacement(J1, J2, J3, J4);
 
