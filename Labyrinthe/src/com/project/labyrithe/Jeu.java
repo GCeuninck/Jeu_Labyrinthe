@@ -47,11 +47,9 @@ public class Jeu {
         jeu.tuile_mobile = jeu.plateau_jeu.creerTuile(Integer.parseInt(jeu.plateau_jeu.liste_tuiles.getFirst()[0]), jeu.plateau_jeu.liste_tuiles.getFirst()[2], 0, jeu.plateau_jeu.liste_tuiles.getFirst()[1], null, null);
 
         plateau.afficherPlateau();
-        //jeu.tuile_mobile.afficherTuile();
-        System.out.println("Tuile restante : " + jeu.tuile_mobile);  
+        jeu.tuile_mobile.afficherTuile();
 
         //jeu.testDeplacement(J1, J2, J3, J4);
-
         //jeu.testTresor();
 
         while(!J1.victoire && !J2.victoire && !J3.victoire && !J4.victoire){
@@ -126,7 +124,7 @@ public class Jeu {
 
         this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this , inputLine, inputSelect, inputN, this.tuile_mobile, inputR);
         this.plateau_jeu.afficherPlateau();
-        System.out.println("Tuile restante: " + this.tuile_mobile);
+        this.tuile_mobile.afficherTuile();
         
     }
     

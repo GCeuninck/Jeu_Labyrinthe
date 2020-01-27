@@ -123,21 +123,71 @@ public abstract class Tuile implements Int_Tuile{
 		boolean[] accesTuile;
     	int i;
 
-		for(i=0; i<4; i++){
+    	System.out.println("Tuile restante: ");
+
+		for(i=0; i<4; i++) {
 			this.Rotation(i);
 			accesTuile = this.getAccess();
 
-			if(accesTuile[0] == true && i == 3){
-				System.out.println(" |-------###-------| ");
-			}else if(accesTuile[0] == false && i == 3){
-				System.out.print(" |-----------------| ");
-			}else if(accesTuile[0] == true){
-				System.out.print(" |-------###-------| ");
-			}else if(accesTuile[0] == false){
-				System.out.print(" |-----------------| ");
+
+			if (accesTuile[0] == true && i == 3) {
+				System.out.println("|-------###-------|");
+			} else if (accesTuile[0] == false && i == 3) {
+				System.out.println("|-----------------|");
+			} else if (accesTuile[0] == true) {
+				System.out.print("|-------###-------|");
+			} else if (accesTuile[0] == false) {
+				System.out.print("|-----------------|");
+			}
+		}
+
+		for(i=0; i<4; i++) {
+			String temp = "";
+			this.Rotation(i);
+			accesTuile = this.getAccess();
+
+			if(accesTuile[3] == true){
+				temp = temp.concat("#");
+			}else if(accesTuile[3] == false){
+				temp = temp.concat("|");
 			}
 
+			if(this.isSpecial()){
+				temp = temp.concat(String.format("%-4s%-13s", "", "SPECIALE"));
+			}else if(this.getTresor().equals("null")){
+				temp = temp.concat(String.format("%-17s", ""));
+			}else{
+				temp = temp.concat(String.format("%-2s%-15s", "",this.getTresor()));
+			}
+
+			if(accesTuile[1] == true){
+				temp = temp.concat("#");
+			}else if(accesTuile[1] == false){
+				temp = temp.concat("|");
+			}
+
+			if(i == 3){
+				System.out.println(temp);
+			}else{
+				System.out.print(temp);
+			}
 		}
+
+		for(i=0; i<4; i++) {
+			this.Rotation(i);
+			accesTuile = this.getAccess();
+
+			if(accesTuile[2] == true && i == 3){
+				System.out.println("|-------###-------|");
+			}else if(accesTuile[2] == false && i == 3){
+				System.out.println("|-----------------|");
+			}else if(accesTuile[2] == true){
+				System.out.print("|-------###-------|");
+			}else if(accesTuile[2] == false){
+				System.out.print("|-----------------|");
+			}
+		}
+
 	}
 
 	@Override
