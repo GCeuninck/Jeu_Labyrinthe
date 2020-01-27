@@ -1,18 +1,18 @@
 package com.project.labyrithe;
 
 public abstract class Tuile implements Int_Tuile{
-    String tresor = null;
-    boolean haut;       //Autorise deplacement du joueur
-    boolean bas;
-    boolean gauche;
-    boolean droit;
-    int rotation = 0;   //Permet de connaitre le sens dans lequel on place la tuile dans le labyrinthe
-    int id;
-    Integer x_coord, y_coord;
+    protected String tresor = null;
+    protected boolean haut;       //Autorise deplacement du joueur
+    protected boolean bas;
+    protected boolean gauche;
+    protected boolean droit;
+    protected int rotation = 0;   //Permet de connaitre le sens dans lequel on place la tuile dans le labyrinthe
+    protected int id;
+    protected Integer x_coord, y_coord;
     
-    boolean tuile_depart = false;
-	boolean tuile_echange = false;
-	boolean tuile_rotation = false;
+    protected boolean tuile_depart = false;
+    protected boolean tuile_echange = false;
+    protected boolean tuile_rotation = false;
     
     public boolean[] getAccess() {
     	
@@ -74,6 +74,7 @@ public abstract class Tuile implements Int_Tuile{
     }
 
 	public String getTresor(){
+		
 		return this.tresor;
 	}
 
@@ -87,24 +88,23 @@ public abstract class Tuile implements Int_Tuile{
     	return coord;
     }
     
-    public void copieCoord(Int_Tuile tuile) {
-    	
-    	if(tuile != null) {
-	    	this.x_coord = tuile.getCoord()[0];
-	    	this.y_coord = tuile.getCoord()[1];
-    	}else {
-    		this.x_coord = null;
-    		this.y_coord = null;
-    	}
-    }
-    
     public void setCoord(Integer x_coord, Integer y_coord) {
     	    	
     	this.x_coord = x_coord;
     	this.y_coord = y_coord;
     }
+    
+    public void copieCoord(Int_Tuile tuile) {
+    	
+    	if(tuile != null) {
+    		this.setCoord(tuile.getCoord()[0], tuile.getCoord()[1]);
+    	}else {
+    		this.setCoord(null, null);
+    	}
+    }
 
 	public int getId(){
+		
     	return this.id;
 	}
 	
