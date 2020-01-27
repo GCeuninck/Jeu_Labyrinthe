@@ -73,6 +73,7 @@ public class Joueur {
     	
     	if(this.cartes.isEmpty()) {
     		res = true;
+    		System.out.println("Voictoire " + this.couleur + "!");
     	}
     	
     	return res;
