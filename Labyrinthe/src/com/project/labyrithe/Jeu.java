@@ -52,10 +52,20 @@ public class Jeu {
         //jeu.testTresor();
 
         while(!J1.victoire && !J2.victoire && !J3.victoire && !J4.victoire){
-            jeu.tourJoueur(J1);
-            jeu.tourJoueur(J2);
-            jeu.tourJoueur(J3);
-            jeu.tourJoueur(J4);
+
+            if(!J1.victoire && !J2.victoire && !J3.victoire && !J4.victoire){
+                jeu.tourJoueur(J1);
+            }
+            if(!J1.victoire && !J2.victoire && !J3.victoire && !J4.victoire){
+                jeu.tourJoueur(J2);
+            }
+            if(!J1.victoire && !J2.victoire && !J3.victoire && !J4.victoire){
+                jeu.tourJoueur(J3);
+            }
+            if(!J1.victoire && !J2.victoire && !J3.victoire && !J4.victoire){
+                jeu.tourJoueur(J4);
+            }
+            
         }
     }
 
