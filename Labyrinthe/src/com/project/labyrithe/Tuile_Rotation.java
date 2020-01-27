@@ -52,11 +52,11 @@ public class Tuile_Rotation extends Tuile{
     	
     	Scanner scanner = new Scanner(System.in);
 
-    	int input_ligne = -1;
-        int input_colonne = -1;
+    	int input_ligne = 1;
+        int input_colonne = 1;
         int rotation = -1;
 
-        while(input_ligne % 2 != 0 || input_colonne%2 != 0) {
+        while((input_ligne %2 == 1 && input_colonne %2 == 1) || input_ligne < 1 || input_ligne > 7 || input_colonne < 1 || input_colonne > 7) {
         	System.out.println("Selectionnez une coordonnee ligne mobile");
             input_ligne = scanner.nextInt();
             
