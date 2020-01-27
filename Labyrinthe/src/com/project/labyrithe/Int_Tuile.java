@@ -13,4 +13,5 @@ public interface Int_Tuile {
     public int getId();
     public boolean isSpecial();
     public void Action(Jeu jeu);
+    public void afficherTuile();
 }

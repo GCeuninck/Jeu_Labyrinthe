@@ -47,6 +47,7 @@ public class Jeu {
         jeu.tuile_mobile = jeu.plateau_jeu.creerTuile(Integer.parseInt(jeu.plateau_jeu.liste_tuiles.getFirst()[0]), jeu.plateau_jeu.liste_tuiles.getFirst()[2], 0, jeu.plateau_jeu.liste_tuiles.getFirst()[1], null, null);
 
         plateau.afficherPlateau();
+        //jeu.tuile_mobile.afficherTuile();
         System.out.println("Tuile restante : " + jeu.tuile_mobile);  
 
         //jeu.testDeplacement(J1, J2, J3, J4);

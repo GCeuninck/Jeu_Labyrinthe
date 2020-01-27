@@ -119,8 +119,34 @@ public abstract class Tuile implements Int_Tuile{
 		return res;
 	}
 
+	public void afficherTuile(){
+		boolean[] accesTuile;
+    	int i;
+
+		for(i=0; i<4; i++){
+			this.Rotation(i);
+			accesTuile = this.getAccess();
+
+			if(accesTuile[0] == true && i == 3){
+				System.out.println(" |-------###-------| ");
+			}else if(accesTuile[0] == false && i == 3){
+				System.out.print(" |-----------------| ");
+			}else if(accesTuile[0] == true){
+				System.out.print(" |-------###-------| ");
+			}else if(accesTuile[0] == false){
+				System.out.print(" |-----------------| ");
+			}
+
+		}
+	}
+
 	@Override
 	public String toString() {
-		return String.format(" -%s:%s (%s)-  ", this.tresor, this.id, this.rotation);
+    	if(this.tresor.equals("null")){
+			return String.format("%s", this.tresor);
+		}else{
+			return String.format("%s - %s", this.tresor, this.tresor);
+		}
+
 	}
 }

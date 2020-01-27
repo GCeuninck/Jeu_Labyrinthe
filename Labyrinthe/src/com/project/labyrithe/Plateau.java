@@ -1,9 +1,6 @@
 package com.project.labyrithe;
 import java.io.*;
 import java.util.*;
-import java.text.Format;
-import java.text.FieldPosition;
-import java.text.ParsePosition;
 
 public class Plateau {
 
@@ -134,7 +131,9 @@ public class Plateau {
                     temp = temp.concat("|");
                 }
 
-                if(plateau[i][j].getTresor().equals("null")){
+                if(plateau[i][j].isSpecial()){
+                    temp = temp.concat(String.format("%-4s%-13s", "", "SPECIALE"));
+                }else if(plateau[i][j].getTresor().equals("null")){
                     temp = temp.concat(String.format("%-17s", ""));
                 }else{
                     temp = temp.concat(String.format("%-2s%-15s", "",plateau[i][j].getTresor()));
