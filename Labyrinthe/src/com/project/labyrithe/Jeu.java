@@ -71,7 +71,6 @@ public class Jeu {
 
     void tourJoueur(Joueur joueur){
     	
-    	joueur.updateJoueur();
     	joueur.afficherJoueur();
         Scanner scanner = new Scanner(System.in);
 

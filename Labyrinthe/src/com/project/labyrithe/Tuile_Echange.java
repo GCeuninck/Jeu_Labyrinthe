@@ -51,11 +51,10 @@ public class Tuile_Echange extends Tuile{
     public void Echange(Joueur J1, Joueur J2) {
     	Int_Tuile pos_temp = J1.position;
     	
-    	if(J2.special_echange) {
-	    	J1.position = J2.position;
-			J2.position = pos_temp;
-			J2.special_echange = false;
-    	}
+    	J1.position = J2.position;
+		J2.position = pos_temp;
+		J1.updateJoueur();
+		J2.updateJoueur();
     }
 
     //Echange la place d'un joueur avec un autre
@@ -76,9 +75,8 @@ public class Tuile_Echange extends Tuile{
             inputJ2 = scanner.nextInt();
         }
 
-        if(inputJ1 == 1 && jeu.J1.special_echange) {
-        	
-        	jeu.J1.special_echange = false;        	
+        if(inputJ1 == 1) {
+        	     	
         	switch(inputJ2) {
         		case 2: 
         			Echange(jeu.J1, jeu.J2);
@@ -92,9 +90,8 @@ public class Tuile_Echange extends Tuile{
         		default: break;
         	}
         }
-        else if(inputJ1 == 2 && jeu.J2.special_echange) {
+        else if(inputJ1 == 2) {
 
-        	jeu.J2.special_echange = false;
         	switch(inputJ2) {
         		case 1: 
         			Echange(jeu.J2, jeu.J1);
@@ -108,9 +105,8 @@ public class Tuile_Echange extends Tuile{
         		default: break;
         	}
         }
-        else if(inputJ1 == 3 && jeu.J3.special_echange) {
+        else if(inputJ1 == 3) {
         	
-        	jeu.J3.special_echange = false;
         	switch(inputJ2) {
         		case 1: 
         			Echange(jeu.J3, jeu.J1);
@@ -124,9 +120,8 @@ public class Tuile_Echange extends Tuile{
         		default: break;
         	}
         }
-        else if(inputJ1 == 4 && jeu.J4.special_echange) {
+        else if(inputJ1 == 4) {
         	
-        	jeu.J4.special_echange = false;
         	switch(inputJ2) {
         		case 1: 
         			Echange(jeu.J4, jeu.J1);

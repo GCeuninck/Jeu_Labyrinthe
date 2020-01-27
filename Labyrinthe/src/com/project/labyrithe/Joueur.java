@@ -5,8 +5,6 @@ import com.project.labyrithe.AStar.Noeud;
 
 public class Joueur {
     boolean victoire;
-    boolean special_echange;
-    boolean special_rotation;
     String couleur;
     Int_Tuile position;
     Integer x_coord, y_coord;
@@ -16,8 +14,6 @@ public class Joueur {
 
     Joueur(Plateau plateau_jeu, String couleur, Integer x_coord, Integer y_coord){
         this.victoire = false;
-        this.special_echange = true;
-        this.special_rotation = true;
         this.couleur = couleur;
         this.id_depart = plateau_jeu.plateau[x_coord][y_coord].getId();
         this.position = plateau_jeu.plateau[x_coord][y_coord];
