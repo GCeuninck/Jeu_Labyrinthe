@@ -1,6 +1,9 @@
 package com.project.labyrithe;
 import java.io.*;
 import java.util.*;
+import java.text.Format;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
 
 public class Plateau {
 
@@ -101,11 +104,71 @@ public class Plateau {
     }
 
     public void afficherPlateau(){
-        for(int i=0; i < plateau.length; i++){
-            for(int j=0; j < plateau[i].length; j++){
-                System.out.print(plateau[i][j] + " ");
+        boolean[] accesTuile;
+        int i;
+        int j;
+
+        for(i=0; i < plateau.length; i++){
+            for(j=0; j < plateau[i].length; j++){
+                accesTuile = plateau[i][j].getAccess();
+
+                if(accesTuile[0] == true && j == plateau[i].length-1){
+                    System.out.println("|-------   -------|");
+                }else if(accesTuile[0] == false && j == plateau[i].length-1){
+                    System.out.println("|-----------------|");
+                }else if(accesTuile[0] == true){
+                    System.out.print("|-------   -------|");
+                }else if(accesTuile[0] == false){
+                    System.out.print("|-----------------|");
+                }
+
             }
-            System.out.println();
+
+            for(j=0; j < plateau[i].length; j++){
+                accesTuile = plateau[i][j].getAccess();
+                String temp = "";
+
+                System.out.print(temp);
+
+                if(accesTuile[3] == true){
+                    temp = temp.concat("|");
+                }else if(accesTuile[3] == false){
+                    temp = temp.concat(" ");
+                }
+
+                if(plateau[i][j].getTresor().equals("null")){
+                    temp = temp.concat(String.format("%-17s", " "));
+                }else{
+                    temp = temp.concat(String.format("%-17s", plateau[i][j].getTresor()));
+                }
+
+                if(accesTuile[1] == true){
+                    temp = temp.concat("|");
+                }else if(accesTuile[1] == false){
+                    temp = temp.concat(" ");
+                }
+
+                if(j != plateau[i].length - 1){
+                    System.out.print(temp);
+                }else{
+                    System.out.println(temp);
+                }
+            }
+
+            for(j=0; j < plateau[i].length; j++){
+                accesTuile = plateau[i][j].getAccess();
+
+                if(accesTuile[2] == true && j == plateau[i].length-1){
+                    System.out.println("|-------   -------|");
+                }else if(accesTuile[2] == false && j == plateau[i].length-1){
+                    System.out.println("|-----------------|");
+                }else if(accesTuile[2] == true){
+                    System.out.print("|-------   -------|");
+                }else if(accesTuile[2] == false){
+                    System.out.print("|-----------------|");
+                }
+
+            }
         }
     }
 
