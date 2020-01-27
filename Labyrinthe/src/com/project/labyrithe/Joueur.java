@@ -27,6 +27,11 @@ public class Joueur {
     	System.out.println(this.couleur + " : " + this.position + " x,y :" + (this.x_coord + 1) + (this.y_coord + 1));
     }
     
+    public void afficherCartes() {
+    	
+    	System.out.println(this.couleur + " Cartes: " + this.cartes);
+    }
+    
     boolean deplacementJoueur(Plateau plateau_jeu, Integer x, Integer y) {
 
         boolean deplacementFait = false;

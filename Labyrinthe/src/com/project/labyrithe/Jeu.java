@@ -32,20 +32,22 @@ public class Jeu {
         jeu.J3.tirerCartes(jeu.cartes);
         jeu.J4.tirerCartes(jeu.cartes);
 
-        System.out.println("J1 Cartes: " + jeu.J1.cartes);
-        System.out.println("J2 Cartes: " + jeu.J2.cartes);
-        System.out.println("J3 Cartes: " + jeu.J3.cartes);
-        System.out.println("J4 Cartes: " + jeu.J4.cartes);
+        jeu.J1.afficherJoueur();
+        jeu.J1.afficherCartes();
+                
+        jeu.J2.afficherJoueur();
+        jeu.J2.afficherCartes();
+        
+        jeu.J3.afficherJoueur();
+        jeu.J3.afficherCartes();
+        
+        jeu.J4.afficherJoueur();
+        jeu.J4.afficherCartes();
 
         jeu.tuile_mobile = jeu.plateau_jeu.creerTuile(Integer.parseInt(jeu.plateau_jeu.liste_tuiles.getFirst()[0]), jeu.plateau_jeu.liste_tuiles.getFirst()[2], 0, jeu.plateau_jeu.liste_tuiles.getFirst()[1], null, null);
 
         plateau.afficherPlateau();
-        System.out.println("Tuile restante : " + jeu.tuile_mobile);
-        
-        jeu.J1.afficherJoueur();
-        jeu.J2.afficherJoueur();
-        jeu.J3.afficherJoueur();
-        jeu.J4.afficherJoueur();
+        System.out.println("Tuile restante : " + jeu.tuile_mobile);       
 
         //jeu.testDeplacement(J1, J2, J3, J4);
 
@@ -71,7 +73,11 @@ public class Jeu {
 
     void tourJoueur(Joueur joueur){
     	
+    	System.out.println("Tour " + joueur.couleur);
+    	
     	joueur.afficherJoueur();
+    	joueur.afficherCartes();
+    	
         Scanner scanner = new Scanner(System.in);
 
         boolean inputLine;
@@ -83,8 +89,6 @@ public class Jeu {
         int inputR = -1;
         int inputX = -1;
         int inputY = -1;
-
-        System.out.println("Tour " + joueur.couleur);
 
         System.out.println("Selection - Ligne : 1 | Colonne : 2");
         while(inputL != 1 && inputL != 2) {
