@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class Cartes {
     
-	LinkedList<String[]> liste_cartes;
+	protected LinkedList<String[]> liste_cartes;
 
     Cartes(){
         initialiserCartes();
