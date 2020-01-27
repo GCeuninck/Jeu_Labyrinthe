@@ -153,7 +153,13 @@ public abstract class Tuile implements Int_Tuile{
 			}
 
 			if(this.isSpecial()){
-				temp = temp.concat(String.format("%-4s%-13s", "", "SPECIALE"));
+				if(this.isRotation()){
+					temp = temp.concat(String.format("%-4s%-13s", "", "ROTATION"));
+				}else if(this.isEchange()){
+					temp = temp.concat(String.format("%-4s%-13s", "", "ECHANGE"));
+				}else if(this.isDepart()){
+					temp = temp.concat(String.format("%-6s%-11s", "", "DEPART"));
+				}
 			}else if(this.getTresor().equals("null")){
 				temp = temp.concat(String.format("%-17s", ""));
 			}else{

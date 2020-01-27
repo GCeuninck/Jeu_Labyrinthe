@@ -132,7 +132,13 @@ public class Plateau {
                 }
 
                 if(plateau[i][j].isSpecial()){
-                    temp = temp.concat(String.format("%-4s%-13s", "", "SPECIALE"));
+                    if(plateau[i][j].isRotation()){
+                        temp = temp.concat(String.format("%-4s%-13s", "", "ROTATION"));
+                    }else if(plateau[i][j].isEchange()){
+                        temp = temp.concat(String.format("%-4s%-13s", "", "ECHANGE"));
+                    }else if(plateau[i][j].isDepart()){
+                        temp = temp.concat(String.format("%-6s%-11s", "", "DEPART"));
+                    }
                 }else if(plateau[i][j].getTresor().equals("null")){
                     temp = temp.concat(String.format("%-17s", ""));
                 }else{
