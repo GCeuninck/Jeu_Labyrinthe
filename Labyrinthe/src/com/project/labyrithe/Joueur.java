@@ -24,7 +24,7 @@ public class Joueur {
     
     public void afficherJoueur(){
 
-    	System.out.println(this.couleur + " : " + this.position + " x,y :" + this.x_coord + this.y_coord);
+    	System.out.println(this.couleur + " : " + this.position + " x,y :" + (this.x_coord + 1) + (this.y_coord + 1));
     }
     
     boolean deplacementJoueur(Plateau plateau_jeu, Integer x, Integer y) {

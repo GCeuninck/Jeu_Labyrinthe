@@ -121,6 +121,6 @@ public abstract class Tuile implements Int_Tuile{
 
 	@Override
 	public String toString() {
-		return String.format(" -%s:%s : %s,%s (%s)-  ", this.tresor, this.id, this.x_coord, this.y_coord, this.rotation);
+		return String.format(" -%s:%s (%s)-  ", this.tresor, this.id, this.rotation);
 	}
 }

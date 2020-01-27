@@ -116,18 +116,18 @@ public class Jeu {
 
         System.out.println("Entrer la case de destination (ligne ; colonne): ");
 
-        System.out.println("Entrer Ligne: ");
+        System.out.println("Entrer Ligne (1 a 7) : ");
         inputX = scanner.nextInt();
-        System.out.println("Entrer Colonne: ");
+        System.out.println("Entrer Colonne (1 a 7) : ");
         inputY = scanner.nextInt();
 
-        while (!joueur.deplacementJoueur(this.plateau_jeu, inputX, inputY)){
+        while (!joueur.deplacementJoueur(this.plateau_jeu, inputX - 1, inputY - 1)){
             System.out.println("DEPLACEMENT IMPOSSIBLE");
 
-            System.out.println("Entrer Ligne: ");
+            System.out.println("Entrer Ligne (1 a 7) : ");
             inputX = scanner.nextInt();
 
-            System.out.println("Entrer Colonne: ");
+            System.out.println("Entrer Colonne (1 a 7) : ");
             inputY = scanner.nextInt();
         }
 
