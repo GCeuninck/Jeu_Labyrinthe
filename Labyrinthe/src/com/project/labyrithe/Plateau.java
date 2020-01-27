@@ -113,11 +113,11 @@ public class Plateau {
                 accesTuile = plateau[i][j].getAccess();
 
                 if(accesTuile[0] == true && j == plateau[i].length-1){
-                    System.out.println("|-------   -------|");
+                    System.out.println("|-------###-------|");
                 }else if(accesTuile[0] == false && j == plateau[i].length-1){
                     System.out.println("|-----------------|");
                 }else if(accesTuile[0] == true){
-                    System.out.print("|-------   -------|");
+                    System.out.print("|-------###-------|");
                 }else if(accesTuile[0] == false){
                     System.out.print("|-----------------|");
                 }
@@ -128,24 +128,22 @@ public class Plateau {
                 accesTuile = plateau[i][j].getAccess();
                 String temp = "";
 
-                System.out.print(temp);
-
                 if(accesTuile[3] == true){
-                    temp = temp.concat("|");
+                    temp = temp.concat("#");
                 }else if(accesTuile[3] == false){
-                    temp = temp.concat(" ");
+                    temp = temp.concat("|");
                 }
 
                 if(plateau[i][j].getTresor().equals("null")){
-                    temp = temp.concat(String.format("%-17s", " "));
+                    temp = temp.concat(String.format("%-17s", ""));
                 }else{
-                    temp = temp.concat(String.format("%-17s", plateau[i][j].getTresor()));
+                    temp = temp.concat(String.format("%-2s%-15s", "",plateau[i][j].getTresor()));
                 }
 
                 if(accesTuile[1] == true){
-                    temp = temp.concat("|");
+                    temp = temp.concat("#");
                 }else if(accesTuile[1] == false){
-                    temp = temp.concat(" ");
+                    temp = temp.concat("|");
                 }
 
                 if(j != plateau[i].length - 1){
@@ -159,11 +157,11 @@ public class Plateau {
                 accesTuile = plateau[i][j].getAccess();
 
                 if(accesTuile[2] == true && j == plateau[i].length-1){
-                    System.out.println("|-------   -------|");
+                    System.out.println("|-------###-------|");
                 }else if(accesTuile[2] == false && j == plateau[i].length-1){
                     System.out.println("|-----------------|");
                 }else if(accesTuile[2] == true){
-                    System.out.print("|-------   -------|");
+                    System.out.print("|-------###-------|");
                 }else if(accesTuile[2] == false){
                     System.out.print("|-----------------|");
                 }
@@ -225,8 +223,7 @@ public class Plateau {
                 }
                 plateau[num - 1][0] = tuile_ajout;
                 plateau[num - 1][0].setCoord(num-1, 0);
-                
-                System.out.println("G-->D");
+
             } else if (ligne && !sens) {
                 tuile_mobile = plateau[num - 1][0];
                 
@@ -240,8 +237,7 @@ public class Plateau {
                 }
                 plateau[num - 1][6] = tuile_ajout;
                 plateau[num - 1][6].setCoord(num-1, 6);
-                
-                System.out.println("D-->G");
+
             } else if (!ligne && sens){
                 tuile_mobile = plateau[6][num - 1];
                 
@@ -254,10 +250,7 @@ public class Plateau {
                 }
                 plateau[0][num - 1] = tuile_ajout;
                 plateau[0][num - 1].setCoord(0, num-1);
-                
-                
-                
-                System.out.println("H-->B");
+
             } else if (!ligne && !sens){
                 tuile_mobile = plateau[0][num - 1];
                 
@@ -270,8 +263,7 @@ public class Plateau {
                 }
                 plateau[6][num - 1] = tuile_ajout;
                 plateau[6][num - 1].setCoord(6, num-1);
-                
-                System.out.println("B-->H");
+
             }
         }
         
