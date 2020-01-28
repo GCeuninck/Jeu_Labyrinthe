@@ -18,7 +18,7 @@ public class Jeu {
 
     public static void main(String[] args) {
         Plateau plateau = new Plateau();
-        Joueur J1 = new Joueur(plateau, "Bleu", 1, 1);
+        Joueur J1 = new Joueur(plateau, "Bleu", 0, 0);
         Joueur J2 = new Joueur(plateau, "Vert", 0, 6);
         Joueur J3 = new Joueur(plateau, "Jaune", 6, 6);
         Joueur J4 = new Joueur(plateau, "Rouge", 6, 0);
