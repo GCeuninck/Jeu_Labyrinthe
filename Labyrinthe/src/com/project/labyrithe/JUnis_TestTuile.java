@@ -145,7 +145,5 @@ class JUnis_TestTuile {
 		
 		plateau_jeu.plateau[0][3] = new Tuile_I(43, 3, null, 0, 3);
 		assertEquals(3, plateau_jeu.plateau[0][3].getRotation());
-		
-		assertEquals(0, plateau_jeu.plateau[1][1].getRotation());
 	}
 }
