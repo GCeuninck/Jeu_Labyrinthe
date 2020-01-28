@@ -101,11 +101,14 @@ class JUnit_TestJoueur {
 	@Test
 	void testActionCheckRotation() {
 		Plateau plateau_jeu = new Plateau();
-		plateau_jeu.plateau[0][1] = new Tuile_Rotation(5, 3, null, 0, 1);
-		plateau_jeu.plateau[1][1] = new Tuile_L(16, 0, null, 1, 1);
+		plateau_jeu.plateau[0][1] = new Tuile_Rotation(5, 3, "null", 0, 1);
+		plateau_jeu.plateau[1][1] = new Tuile_L(16, 0, "null", 1, 1);
 		Joueur J1 = new Joueur(plateau_jeu, "Bleu", 0, 1);
-		Jeu jeu = new Jeu(plateau_jeu, J1, null, null, null, null);
-				
+		Joueur J2 = new Joueur(plateau_jeu, "Rouge", 6, 6);
+		Joueur J3 = new Joueur(plateau_jeu, "Vert", 0, 6);
+		Joueur J4 = new Joueur(plateau_jeu, "Jaune", 6, 0);
+		Jeu jeu = new Jeu(plateau_jeu, J1, J2, J3, J4, null);
+		
 		System.out.println("testActionCheckRotation :");
 		J1.actionCheck(jeu); // mettre 2 puis 2 puis 2
 		

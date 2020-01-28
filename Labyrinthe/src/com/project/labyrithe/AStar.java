@@ -17,7 +17,7 @@ public class AStar {
 	static class Noeud implements Comparable {
         public Noeud parent;
         public Integer x, y;
-        public double g; // Score de depart a un point d arrivee  du chemin genere
+        public double g; // Score de depart a un point d arrivee du chemin genere
         public double h; // Score estime du depart a fin
         Noeud(Noeud parent, Integer x, Integer y, double g, double h) {
             this.parent = parent;
