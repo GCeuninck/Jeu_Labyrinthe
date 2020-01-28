@@ -118,6 +118,39 @@ public abstract class Tuile implements Int_Tuile{
 		
 		return res;
 	}
+	
+	public boolean isRotation() {
+		
+		boolean res = false;
+		
+		if(this.tuile_rotation) {
+			res = true;
+		}
+		
+		return res;
+	}
+	
+	public boolean isEchange() {
+		
+		boolean res = false;
+		
+		if(this.tuile_echange) {
+			res = true;
+		}
+		
+		return res;
+	}
+	
+	public boolean isDepart() {
+		
+		boolean res = false;
+		
+		if(this.tuile_depart) {
+			res = true;
+		}
+		
+		return res;
+	}
 
 	public void afficherTuile(){
 		boolean[] accesTuile;

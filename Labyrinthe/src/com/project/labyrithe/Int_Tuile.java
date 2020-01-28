@@ -18,7 +18,4 @@ public interface Int_Tuile {
     public void Action(Jeu jeu);
     public void afficherTuile();
     public int getRotation();
-    public boolean isRotation();
-    public boolean isDepart();
-    public boolean isEchange();
 }
