@@ -12,6 +12,9 @@ public interface Int_Tuile {
     public void setCoord(Integer x_coord, Integer y_coord);
     public int getId();
     public boolean isSpecial();
+    public boolean isRotation();
+    public boolean isDepart();
+    public boolean isEchange();
     public void Action(Jeu jeu);
     public void afficherTuile();
     public int getRotation();
