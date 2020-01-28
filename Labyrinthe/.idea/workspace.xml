@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8ebb0eb-0d02-4861-a0e1-9f69bd23a56a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_junit_jupiter_junit_jupiter_api_5_6_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/labyrithe/Int_Tuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/labyrithe/Int_Tuile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Labyrinthe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Labyrinthe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/project/labyrithe/JUnit_TestCartes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/labyrithe/JUnit_TestCartes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/project/labyrithe/JUnit_TestJoueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/labyrithe/JUnit_TestJoueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/project/labyrithe/Jeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/labyrithe/Jeu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/project/labyrithe/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/labyrithe/Plateau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/project/labyrithe/Tuile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/project/labyrithe/Tuile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="241" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,12 +37,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Jeu">
     <configuration name="Jeu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.project.labyrithe.Jeu" />
       <module name="Labyrinthe" />
@@ -50,9 +63,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JUnis_TestTuile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Labyrinthe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.labyrithe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.labyrithe" />
+      <option name="MAIN_CLASS_NAME" value="com.project.labyrithe.JUnis_TestTuile" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnit_TestCartes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Labyrinthe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.labyrithe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.labyrithe" />
+      <option name="MAIN_CLASS_NAME" value="com.project.labyrithe.JUnit_TestCartes" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnit_TestJoueur" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Labyrinthe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.labyrithe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.labyrithe" />
+      <option name="MAIN_CLASS_NAME" value="com.project.labyrithe.JUnit_TestJoueur" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Jeu" />
+        <item itemvalue="JUnit.JUnis_TestTuile" />
+        <item itemvalue="JUnit.JUnit_TestCartes" />
+        <item itemvalue="JUnit.JUnit_TestJoueur" />
       </list>
     </recent_temporary>
   </component>
@@ -82,10 +143,18 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="599" y="208" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1580197775540">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="599" y="208" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580197775540" />
     <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1579077135168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1579077135168" />
+    <state x="689" y="384" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1580197800816">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="384" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1580197800816" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1579717534914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -94,46 +163,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="836" y="414" width="260" height="211" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578988715604" />
-    <state width="1877" height="464" key="GridCell.Tab.0.bottom" timestamp="1580167677000">
+    <state width="1877" height="882" key="GridCell.Tab.0.bottom" timestamp="1580213046157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580167677000" />
-    <state width="1877" height="464" key="GridCell.Tab.0.center" timestamp="1580167677000">
+    <state width="1877" height="882" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580213046157" />
+    <state width="1877" height="882" key="GridCell.Tab.0.center" timestamp="1580213046157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580167677000" />
-    <state width="1877" height="464" key="GridCell.Tab.0.left" timestamp="1580167677000">
+    <state width="1877" height="882" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580213046157" />
+    <state width="1877" height="882" key="GridCell.Tab.0.left" timestamp="1580213046157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580167677000" />
-    <state width="1877" height="464" key="GridCell.Tab.0.right" timestamp="1580167677000">
+    <state width="1877" height="882" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580213046157" />
+    <state width="1877" height="882" key="GridCell.Tab.0.right" timestamp="1580213046157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580167677000" />
-    <state width="1877" height="464" key="GridCell.Tab.1.bottom" timestamp="1580167677000">
+    <state width="1877" height="882" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580213046157" />
+    <state width="1877" height="464" key="GridCell.Tab.1.bottom" timestamp="1580201140294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580167677000" />
-    <state width="1877" height="464" key="GridCell.Tab.1.center" timestamp="1580167677000">
+    <state width="1877" height="464" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580201140294" />
+    <state width="1877" height="464" key="GridCell.Tab.1.center" timestamp="1580201140294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580167677000" />
-    <state width="1877" height="464" key="GridCell.Tab.1.left" timestamp="1580167677000">
+    <state width="1877" height="464" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580201140294" />
+    <state width="1877" height="464" key="GridCell.Tab.1.left" timestamp="1580201140294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580167677000" />
-    <state width="1877" height="464" key="GridCell.Tab.1.right" timestamp="1580167677000">
+    <state width="1877" height="464" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580201140294" />
+    <state width="1877" height="464" key="GridCell.Tab.1.right" timestamp="1580201140294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580167677000" />
-    <state x="461" y="163" key="SettingsEditor" timestamp="1578988754460">
+    <state width="1877" height="464" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580201140294" />
+    <state x="461" y="163" key="SettingsEditor" timestamp="1580198101698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1578988754460" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580167803228">
+    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580198101698" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580212954598">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580167803228" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580212954598" />
+    <state x="664" y="414" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1580198092902">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="664" y="414" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1580198092902" />
     <state x="342" y="141" key="new project wizard" timestamp="1579646087086">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -150,5 +223,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="760" y="210" key="svn.repositoryBrowser/0.0.1920.1040@0.0.1920.1040" timestamp="1578988933132" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Labyrinthe$JUnit_TestCartes.ic" NAME="JUnit_TestCartes Coverage Results" MODIFIED="1580198497036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.project.labyrithe.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -100,7 +100,7 @@ public class Plateau {
         return rint.nextInt(4);
     }
 
-    public void afficherPlateau(){
+    public void afficherPlateau(Jeu jeu){
         boolean[] accesTuile;
         int i;
         int j;
@@ -120,6 +120,32 @@ public class Plateau {
                 }
 
             }
+
+
+            for(j=0; j < plateau[i].length; j++){
+                accesTuile = plateau[i][j].getAccess();
+                String temp = "";
+
+                if(plateau[i][j].getId() == jeu.J1.position.getId()){
+                    temp = temp.concat(String.format("|%-9s", jeu.J1.couleur));
+                }else{
+                    temp = temp.concat(String.format("|%-9s", ""));
+                }
+
+                if(plateau[i][j].getId() == jeu.J2.position.getId()){
+                    temp = temp.concat(String.format("%8s|", jeu.J2.couleur));
+                }else{
+                    temp = temp.concat(String.format("%-8s|", ""));
+                }
+
+                if(j != plateau[i].length - 1){
+                    System.out.print(temp);
+                }else{
+                    System.out.println(temp);
+                }
+
+            }
+
 
             for(j=0; j < plateau[i].length; j++){
                 accesTuile = plateau[i][j].getAccess();
@@ -156,6 +182,30 @@ public class Plateau {
                 }else{
                     System.out.println(temp);
                 }
+            }
+
+            for(j=0; j < plateau[i].length; j++){
+                accesTuile = plateau[i][j].getAccess();
+                String temp = "";
+
+                if(plateau[i][j].getId() == jeu.J4.position.getId()){
+                    temp = temp.concat(String.format("|%-9s", jeu.J4.couleur));
+                }else{
+                    temp = temp.concat(String.format("|%-9s", ""));
+                }
+
+                if(plateau[i][j].getId() == jeu.J3.position.getId()){
+                    temp = temp.concat(String.format("%8s|", jeu.J3.couleur));
+                }else{
+                    temp = temp.concat(String.format("%-8s|", ""));
+                }
+
+                if(j != plateau[i].length - 1){
+                    System.out.print(temp);
+                }else{
+                    System.out.println(temp);
+                }
+
             }
 
             for(j=0; j < plateau[i].length; j++){

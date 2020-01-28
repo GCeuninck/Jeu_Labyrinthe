@@ -1,7 +1,6 @@
 package com.project.labyrithe;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
 class JUnit_TestCartes {

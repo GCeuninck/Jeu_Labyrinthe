@@ -32,21 +32,9 @@ public class Jeu {
         jeu.J3.tirerCartes(jeu.cartes);
         jeu.J4.tirerCartes(jeu.cartes);
 
-        jeu.J1.afficherJoueur();
-        jeu.J1.afficherCartes();
-                
-        jeu.J2.afficherJoueur();
-        jeu.J2.afficherCartes();
-        
-        jeu.J3.afficherJoueur();
-        jeu.J3.afficherCartes();
-        
-        jeu.J4.afficherJoueur();
-        jeu.J4.afficherCartes();
-
         jeu.tuile_mobile = jeu.plateau_jeu.creerTuile(Integer.parseInt(jeu.plateau_jeu.liste_tuiles.getFirst()[0]), jeu.plateau_jeu.liste_tuiles.getFirst()[2], 0, jeu.plateau_jeu.liste_tuiles.getFirst()[1], null, null);
 
-        plateau.afficherPlateau();
+        plateau.afficherPlateau(jeu);
         jeu.tuile_mobile.afficherTuile();
 
         //jeu.testDeplacement(J1, J2, J3, J4);
@@ -73,8 +61,7 @@ public class Jeu {
     void tourJoueur(Joueur joueur){
     	
     	System.out.println("Tour " + joueur.couleur);
-    	
-    	joueur.afficherJoueur();
+
     	joueur.afficherCartes();
 
         this.tourDeplacementPlateau();
@@ -83,7 +70,6 @@ public class Jeu {
         joueur.actionCheck(this);
         joueur.objectifCheck();
         joueur.updateJoueur();
-        joueur.afficherJoueur();
     }
     
     private void tourDeplacementPlateau() {
@@ -123,7 +109,7 @@ public class Jeu {
         }
 
         this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this , inputLine, inputSelect, inputN, this.tuile_mobile, inputR);
-        this.plateau_jeu.afficherPlateau();
+        this.plateau_jeu.afficherPlateau(this);
         this.tuile_mobile.afficherTuile();
         
     }
@@ -151,30 +137,33 @@ public class Jeu {
             System.out.println("Entrer Colonne (1 a 7) : ");
             inputY = scanner.nextInt();
         }
+
+        this.plateau_jeu.afficherPlateau(this);
+        this.tuile_mobile.afficherTuile();
     }
     
 
     void testDeplacement(Joueur J1, Joueur J2, Joueur J3, Joueur J4){
         this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this, true, true, 2, this.tuile_mobile, 0);         //Deplace 2e ligne vers droite
-        this.plateau_jeu.afficherPlateau();
+        this.plateau_jeu.afficherPlateau(this);
         System.out.println("Tuile restante: " + this.tuile_mobile);
 
         System.out.println();
 
         this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this, true, false, 2, this.tuile_mobile, 3);        //Deplace 2e ligne vers gauche
-        this.plateau_jeu.afficherPlateau();
+        this.plateau_jeu.afficherPlateau(this);
         System.out.println("Tuile restante: " + this.tuile_mobile);
 
         System.out.println();
 
         this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this, false, true, 2, this.tuile_mobile, 2);        //Deplace 2e colonne vers bas
-        this.plateau_jeu.afficherPlateau();
+        this.plateau_jeu.afficherPlateau(this);
         System.out.println("Tuile restante: " + this.tuile_mobile);
 
         System.out.println();
 
         this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this, false, false, 2, this.tuile_mobile, 0);        //Deplace 2e colonne vers haut
-        this.plateau_jeu.afficherPlateau();
+        this.plateau_jeu.afficherPlateau(this);
         System.out.println("Tuile restante: " + this.tuile_mobile);
     }
 
