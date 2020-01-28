@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class JUnis_TestTuile {
+class JUnit_TestTuile {
 
 	@Test
 	void testGetAccess() {
@@ -156,4 +156,5 @@ class JUnis_TestTuile {
 		
 		assertEquals(1, plateau_jeu.plateau[0][3].getRotation());
 	}
+
 }
