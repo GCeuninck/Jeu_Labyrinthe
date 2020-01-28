@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class JUnit_TestCartes {
 
 	@Test
-	void TestInitialiserCartes(){
+	void testInitialiserCartes(){
 
 		Cartes cartes = new Cartes();
 		
@@ -16,7 +16,7 @@ class JUnit_TestCartes {
 	}
 	
 	@Test
-	void TestGetCarte() {
+	void testGetCarte() {
 		
 		Cartes cartes = new Cartes();
 		
