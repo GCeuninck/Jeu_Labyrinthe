@@ -31,7 +31,7 @@ public class Joueur {
     	System.out.println(this.couleur + " Cartes: " + this.cartes);
     }
     
-    boolean deplacementJoueur(Plateau plateau_jeu, Integer x, Integer y) {
+    protected boolean deplacementJoueur(Plateau plateau_jeu, Integer x, Integer y) {
 
         boolean deplacementFait = false;
     	AStar as = new AStar(plateau_jeu, this.x_coord, this.y_coord);
@@ -48,14 +48,14 @@ public class Joueur {
     	return deplacementFait;
     }
 
-    void tirerCartes(Cartes paquet_cartes){
+    protected void tirerCartes(Cartes paquet_cartes){
 
         this.cartes.add(paquet_cartes.getCarte());
         this.cartes.add(paquet_cartes.getCarte());
         this.cartes.add(paquet_cartes.getCarte());
     }
 
-    void objectifCheck(){
+    protected void objectifCheck(){
 
         String tresor_case = this.position.getTresor();
 
@@ -64,7 +64,7 @@ public class Joueur {
         }
     }
     
-    public boolean objectifCompleted() {
+    protected boolean objectifCompleted() {
     	
     	boolean res = false;
     	
@@ -75,20 +75,20 @@ public class Joueur {
     	return res;
     }
 
-    void actionCheck(Jeu jeu){
+    protected void actionCheck(Jeu jeu){
     	
         if(this.position.isSpecial()) {
         	this.position.Action(jeu);
         }
     }
 
-    public void updateJoueur() {
+    protected void updateJoueur() {
     	
     	this.x_coord = this.position.getCoord()[0];
     	this.y_coord = this.position.getCoord()[1];
     }
     
-    void replaceJoueur(Plateau plateau_jeu, boolean ligne, boolean sens, int num) {
+    protected void replaceJoueur(Plateau plateau_jeu, boolean ligne, boolean sens, int num) {
     	
     	if (ligne && sens) {
             

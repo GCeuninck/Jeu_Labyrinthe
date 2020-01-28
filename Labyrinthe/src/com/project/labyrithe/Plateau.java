@@ -4,8 +4,8 @@ import java.util.*;
 
 public class Plateau {
 
-    Int_Tuile[][] plateau;
-    LinkedList<String[]> liste_tuiles;
+    protected Int_Tuile[][] plateau;
+    protected LinkedList<String[]> liste_tuiles;
 
     Plateau(){
         initialisationTuiles();
@@ -13,7 +13,7 @@ public class Plateau {
         generationPlateau();
     }
 
-    public void generationPlateau(){
+    protected void generationPlateau(){
 
         int i, j;
 
@@ -67,7 +67,7 @@ public class Plateau {
         }
     }
 
-    void initialisationTuiles(){
+    protected void initialisationTuiles(){
 
         //Récupération des informations des tuiles sous forme de liste
         File file = new File("Repart_Tuiles.csv");
@@ -84,7 +84,7 @@ public class Plateau {
         liste_tuiles.removeFirst();
     }
 
-    int tirageAleatoireID(){
+    protected int tirageAleatoireID(){
 
         Random rint = new Random();
         Integer rnum = rint.nextInt(liste_tuiles.size());
@@ -95,12 +95,12 @@ public class Plateau {
         return rnum;
     }
 
-    int tirageAleatoireRot(){
+    protected int tirageAleatoireRot(){
         Random rint = new Random();
         return rint.nextInt(4);
     }
 
-    public void afficherPlateau(Jeu jeu){
+    protected void afficherPlateau(Jeu jeu){
         boolean[] accesTuile;
         int i;
         int j;
@@ -225,7 +225,7 @@ public class Plateau {
         }
     }
 
-    Int_Tuile creerTuile(int id_tuile, String tresor, int rotation, String type_tuile, Integer i, Integer j){
+    protected Int_Tuile creerTuile(int id_tuile, String tresor, int rotation, String type_tuile, Integer i, Integer j){
         Int_Tuile tuile;
 
         switch (type_tuile) {
@@ -259,7 +259,7 @@ public class Plateau {
     //Ligne = true : mouvement sur ligne ; Ligne = false : mouvement sur colonne
     //Sens = true : petit vers grand ; Sens = false : grand vers petit
     //Num : indice de la ligne à déplacer;
-    Int_Tuile deplacementPlateau(Jeu jeu, boolean ligne, boolean sens, int num, Int_Tuile tuile_ajout, int rotation){
+    protected Int_Tuile deplacementPlateau(Jeu jeu, boolean ligne, boolean sens, int num, Int_Tuile tuile_ajout, int rotation){
         tuile_ajout.Rotation(rotation);
         Int_Tuile tuile_mobile = null;
         int i;
@@ -328,7 +328,7 @@ public class Plateau {
         return tuile_mobile;
     }
     
-    public void checkJoueurPostDeplacement(Jeu jeu, boolean ligne, boolean sens, int num, Int_Tuile tuile_mobile) {
+    protected void checkJoueurPostDeplacement(Jeu jeu, boolean ligne, boolean sens, int num, Int_Tuile tuile_mobile) {
     	
     	if(tuile_mobile.getJoueur(jeu.J1)) {
         	jeu.J1.replaceJoueur(jeu.plateau_jeu, ligne, sens, num);

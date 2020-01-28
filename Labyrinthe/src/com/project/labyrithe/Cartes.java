@@ -14,7 +14,7 @@ public class Cartes {
         initialiserCartes();
     }
 
-    void initialiserCartes(){
+    private void initialiserCartes(){
         //Recuperation des informations des cartes dans une liste
         File file = new File("Cartes.csv");
         String ligne;
@@ -29,7 +29,7 @@ public class Cartes {
         }
     }
 
-    String getCarte(){
+    protected String getCarte(){
 
         Random rint = new Random();
         Integer rnum = rint.nextInt(liste_cartes.size());

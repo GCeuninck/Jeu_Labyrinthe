@@ -8,7 +8,7 @@ public interface Int_Tuile {
     public boolean getJoueur(Joueur J);
     public String getTresor();
     public Integer[] getCoord();
-    void copieCoord(Int_Tuile tuile);
+    public void copieCoord(Int_Tuile tuile);
     public void setCoord(Integer x_coord, Integer y_coord);
     public int getId();
     public boolean isSpecial();

@@ -58,7 +58,7 @@ public class Jeu {
         }
     }
 
-    void tourJoueur(Joueur joueur){
+    private void tourJoueur(Joueur joueur){
     	
     	System.out.println("Tour " + joueur.couleur);
 
@@ -143,7 +143,7 @@ public class Jeu {
     }
     
 
-    void testDeplacement(Joueur J1, Joueur J2, Joueur J3, Joueur J4){
+    private void testDeplacement(Joueur J1, Joueur J2, Joueur J3, Joueur J4){
         this.tuile_mobile = this.plateau_jeu.deplacementPlateau(this, true, true, 2, this.tuile_mobile, 0);         //Deplace 2e ligne vers droite
         this.plateau_jeu.afficherPlateau(this);
         System.out.println("Tuile restante: " + this.tuile_mobile);
@@ -167,7 +167,7 @@ public class Jeu {
         System.out.println("Tuile restante: " + this.tuile_mobile);
     }
 
-    void testTresor(){
+    private void testTresor(){
         //TEST 1 ELEMENT A RECUP
         this.J1.cartes.add("Epee");
         System.out.println("Tresor (2,0): " + this.plateau_jeu.plateau[2][0].getTresor());
