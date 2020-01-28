@@ -50,15 +50,19 @@ public class Tuile_Depart extends Tuile {
     	
     	if(jeu.J1.id_depart == this.getId() && jeu.J1.objectifCompleted()){
     		jeu.J1.victoire = true;
+    		System.out.println("Victoire " + jeu.J1.couleur + "!");
     	}
     	else if(jeu.J2.id_depart == this.getId() && jeu.J2.objectifCompleted()){
     		jeu.J2.victoire = true;
+    		System.out.println("Victoire " + jeu.J2.couleur + "!");
     	}
     	else if(jeu.J3.id_depart == this.getId() && jeu.J3.objectifCompleted()){
     		jeu.J3.victoire = true;
+    		System.out.println("Victoire " + jeu.J3.couleur + "!");
     	}
-    	if(jeu.J4.id_depart == this.getId() && jeu.J4.objectifCompleted()){
+    	else if(jeu.J4.id_depart == this.getId() && jeu.J4.objectifCompleted()){
     		jeu.J4.victoire = true;
+    		System.out.println("Victoire " + jeu.J4.couleur + "!");
     	}
     }
 }

@@ -70,7 +70,6 @@ public class Joueur {
     	
     	if(this.cartes.isEmpty()) {
     		res = true;
-    		System.out.println("Victoire " + this.couleur + "!");
     	}
     	
     	return res;
@@ -97,8 +96,8 @@ public class Joueur {
             this.y_coord = 0;
         } else if (ligne && !sens) {
         	
-        	this.x_coord = plateau_jeu.plateau.length - 1;
-            this.y_coord = num-1;
+        	this.x_coord = num-1;
+            this.y_coord = plateau_jeu.plateau.length - 1;
         } else if (!ligne && sens){
          
         	this.x_coord = 0;
@@ -110,5 +109,6 @@ public class Joueur {
         }
     	
     	this.position = plateau_jeu.plateau[this.x_coord][this.y_coord];
+    	this.updateJoueur();
     }
 }
