@@ -325,6 +325,7 @@ public class Plateau {
         tuile_mobile.copieCoord(null);
         checkJoueurPostDeplacement(jeu, ligne, sens, num, tuile_mobile);
         
+        
         return tuile_mobile;
     }
     
@@ -345,6 +346,11 @@ public class Plateau {
     	if(tuile_mobile.getJoueur(jeu.J4)) {
         	jeu.J4.replaceJoueur(jeu.plateau_jeu, ligne, sens, num);
         }
+    	
+    	jeu.J1.updateJoueur();
+    	jeu.J2.updateJoueur();
+    	jeu.J3.updateJoueur();
+    	jeu.J4.updateJoueur();
     }
 
 }

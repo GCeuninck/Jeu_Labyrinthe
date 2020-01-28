@@ -109,6 +109,5 @@ public class Joueur {
         }
     	
     	this.position = plateau_jeu.plateau[this.x_coord][this.y_coord];
-    	this.updateJoueur();
     }
 }

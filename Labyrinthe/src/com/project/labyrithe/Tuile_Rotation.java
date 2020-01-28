@@ -64,6 +64,8 @@ public class Tuile_Rotation extends Tuile{
             input_colonne = scanner.nextInt();
         }
         
+        jeu.plateau_jeu.plateau[input_ligne-1][input_colonne-1].afficherTuile();
+        
         while(rotation < 0 || rotation > 3) {
         	System.out.println("Selectionnez une rotation valide (0 a 3)");
             rotation = scanner.nextInt();
